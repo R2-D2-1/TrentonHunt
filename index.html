@@ -46,14 +46,15 @@
         margin: auto;
       }
 
-      button {
+      .buttonGlow {
         box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #00ff25, 0 0 5px #00ff25,
           0 0 6px #00ff25, 0 0 7px #00ff25, 0 0 8px #00ff25;
         transition-duration: 0.5s;
         background-color: black;
         color: #00ff25;
-        width: 75%;
-        height: 75%;
+        width: 50%;
+        height: 50%;
+        margin: 2%;
         font-size: x-large;
         font-family: game;
         word-wrap: break-word;
@@ -61,7 +62,7 @@
           0 0 2px #00ff25, 0 0 3px #00ff25, 0 0 3px #00ff25, 0 0 4px #00ff25;
       }
 
-      button:hover {
+      .buttonGlow:hover {
         background-color: #00ff25;
         color: #fff;
       }
@@ -69,6 +70,26 @@
       td {
         vertical-align: middle;
         text-align: center;
+      }
+
+      .flex-container {
+        width: 95%;
+        height: 50%;
+        margin: auto;
+        margin-top: 5%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .col {
+        flex: 50%;
+      }
+      
+      @media (max-width: 550px) {
+        .col {
+          flex: 100%;
+          margin-top: 10%;
+        }
       }
 
     </style>
@@ -121,47 +142,32 @@
     </nav>
 
     <div
-      style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.75);"
+      style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.75); overflow: auto;"
+      class="container-fluid"
     >
 
       <br />
       <!-- Title -->
       <div
         class="boxGlow"
-        style="width: 40rem; height: 6rem; margin: auto; border-spacing: 1%"
+        style="width: 50%; height: 10%; min-height: 100px; min-width: 300px; margin: auto; border-spacing: 1%"
       >
-        <h1 style="text-align: center; padding-top: 1rem; font-family: game;" class="glow">
+        <h1 style="text-align: center; padding-top: 1rem; font-family: game; font-size: xx-large;" class="glow">
           Trenton Hunt
         </h1>
       </div>
 
       <!-- Options -->
-      <table style="width: 95%; height: 50%; margin: auto; margin-top: 5%;">
-        <tr>
-          <td>
-            <button>
-              About Me
-            </button>
-          </td>
-          <td>
-            <button>
-              Interests
-            </button>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <button>
-              Experience
-            </button>
-          </td>
-          <td>
-            <button>
-              Academics
-            </button>
-          </td>
-        </tr>
-      </table>
+      <div class="flex-container">
+        <div class="col" style="text-align: center;">
+          <button class="buttonGlow">About Me</button>
+          <button class="buttonGlow">Experience</button>
+        </div>
+        <div class="col" style="text-align: center;">
+          <button class="buttonGlow">Interests</button>
+          <button class="buttonGlow">Academics</button>
+        </div>
+      </div>
     </div>
   </body>
 </html>
