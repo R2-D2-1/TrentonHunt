@@ -16,83 +16,7 @@
     <!-- My Title and Style -->
     <title>Trenton Hunt's Personal Website</title>
 
-    <style>
-
-      @font-face {
-        font-family: game;
-        src: url(PressStart2P-Regular.ttf);
-      }
-
-      body,
-      html {
-        height: 100%;
-        margin: 0px;
-      }
-
-      .glow {
-        color: rgb(0, 255, 25);
-        text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #00ff25,
-          0 0 2px #00ff25, 0 0 3px #00ff25, 0 0 3px #00ff25, 0 0 4px #00ff25;
-      }
-
-      .boxGlow {
-        box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #00ff25, 0 0 5px #00ff25,
-          0 0 6px #00ff25, 0 0 7px #00ff25, 0 0 8px #00ff25;
-      }
-
-      .center {
-        align-content: center;
-        vertical-align: middle;
-        margin: auto;
-      }
-
-      .buttonGlow {
-        box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #00ff25, 0 0 5px #00ff25,
-          0 0 6px #00ff25, 0 0 7px #00ff25, 0 0 8px #00ff25;
-        transition-duration: 0.5s;
-        background-color: black;
-        color: #00ff25;
-        width: 50%;
-        height: 50%;
-        margin: 2%;
-        font-size: x-large;
-        font-family: game;
-        word-wrap: break-word;
-        text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #00ff25,
-          0 0 2px #00ff25, 0 0 3px #00ff25, 0 0 3px #00ff25, 0 0 4px #00ff25;
-      }
-
-      .buttonGlow:hover {
-        background-color: #00ff25;
-        color: #fff;
-      }
-
-      td {
-        vertical-align: middle;
-        text-align: center;
-      }
-
-      .flex-container {
-        width: 95%;
-        height: 50%;
-        margin: auto;
-        margin-top: 5%;
-        display: flex;
-        flex-wrap: wrap;
-      }
-
-      .col {
-        flex: 50%;
-      }
-      
-      @media (max-width: 550px) {
-        .col {
-          flex: 100%;
-          margin-top: 10%;
-        }
-      }
-
-    </style>
+    <link href="style.css" rel="stylesheet">
 
   </head>
 
@@ -125,16 +49,16 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link 1</a>
+              <a class="nav-link" href="about.html">About Me</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link 2</a>
+              <a class="nav-link" href="experience.html">Experience</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link 3</a>
+              <a class="nav-link" href="interests.html">Interests</a>
             </li>
             <li>
-              <a class="nav-link" href="#"></a>
+              <a class="nav-link" href="contact.html">Contact Me</a>
             </li>
           </ul>
         </div>
@@ -160,12 +84,12 @@
       <!-- Options -->
       <div class="flex-container">
         <div class="col" style="text-align: center;">
-          <button class="buttonGlow">About Me</button>
+          <button class="buttonGlow" onclick="window.location.href='about.html';">About Me</button>
           <button class="buttonGlow">Experience</button>
         </div>
         <div class="col" style="text-align: center;">
           <button class="buttonGlow">Interests</button>
-          <button class="buttonGlow">Academics</button>
+          <button class="buttonGlow">Contact Me</button>
         </div>
       </div>
     </div>
